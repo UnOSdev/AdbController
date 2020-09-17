@@ -17,7 +17,7 @@ def welcome():
             main()
         elif i == 'help':
             print(
-                "ADBcontroller \n 0.13 \n Ubayda \n Alfa Realese \n Notes: \n ADBcontroller can connect only to first device in the adb devices list \n "
+                "ADBcontroller \n Version = 0.1 \n Ubayda \n Alfa Realese \n Notes: \n ADBcontroller can connect only to first device in the adb devices list \n "
                 " If your pc connected to more than 1 devices, you must disconnect the devices that you dont gonna use \n its a little bug and im gonna fixed it in lesser time\n"
                 " Thank you for using ADBcontroller ")
             inpat()
