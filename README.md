@@ -1,7 +1,12 @@
 # AdbController
-This program is just for lazy people who dont want to write long commands in adb.
 
-So far, this program has quite a bit of functionality, but this is just the first version.
+
+This script is just for lazy people who dont want to write long commands in adb.
+
+So far, this script has quite a bit of functionality, but this is just the first version.
+
+NOTE: You must have adb installed, this script is not the 'small version of adb'.
+If you find any bug write it in comment's
 
 ًWork function list:
 
@@ -22,5 +27,8 @@ So far, this program has quite a bit of functionality, but this is just the firs
   Take THE FULL information about the package/app/service : 'fullinfo'
   
   Package's used apk's: 'apkpath' 
+
+The script absolutely does not need superuser or root rights.
+The only thing you need is to enable USB debugging.
 
 Ubayda
