@@ -5,6 +5,8 @@ This script is just for lazy people who dont want to write long commands in adb.
 
 So far, this script has quite a bit of functionality, but this is just the first version.
 
+Download 'ADBcontroller.py'
+
 NOTE: You must have adb installed, this script is not the 'small version of adb'.
 If you find any bug write it in comment's
 
