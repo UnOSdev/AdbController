@@ -8,7 +8,7 @@ So far, this script has quite a bit of functionality, but this is just the first
 Download 'ADBcontroller.py'
 
 NOTE: You must have adb installed, this script is not the 'small version of adb'.
-If you find any bug write it in comment's
+If you find any bug, well contact me for it
 
 ًWork function list:
 
