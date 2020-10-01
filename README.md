@@ -1,13 +1,13 @@
 # AdbController
 
 
-This script is just for lazy people who dont want to write long commands in adb.
+This program can control your android phone by ADB module, without root.
 
 So far, this script has quite a bit of functionality, but this is just the first version.
 
 Download 'ADBcontroller.py'
 
-NOTE: You must have adb installed, this script is not the 'small version of adb'.
+NOTE: This program tested on Linux(Elementart OS), but dont worry its working in Windows too, you need just take "ADBcontroller.py" to adb directory and run it.
 If you find any bug, well contact me for it
 
 ًWork function list:
