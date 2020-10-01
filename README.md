@@ -31,6 +31,6 @@ If you find any bug, well contact me for it
   Package's used apk's: 'apkpath' 
 
 The script absolutely does not need superuser or root rights.
-The only thing you need is to enable USB debugging.
+The only thing you need is to enable USB debugging on you'r android phone.
 
 Ubayda
