@@ -29,6 +29,8 @@ If you find any bug, well contact me for it
   Take THE FULL information about the package/app/service : 'fullinfo'
   
   Package's used apk's: 'apkpath' 
+  
+  Install '.apk' package from 'apks' folder: 'install'
 
 The script absolutely does not need superuser or root rights.
 The only thing you need is to enable USB debugging on you'r android phone.
