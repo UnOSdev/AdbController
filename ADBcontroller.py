@@ -47,34 +47,37 @@ def main():
                 quit()
             else:
                 print("Error you may not writed 'y' or 'n', aborting program.")
-                quit()
         a = get_close_matches('emulator', [device])
         if a != []:
-            print("Detected emulator ('"+device+"'), continue...")
+            print("Detected emulator,continue...")
             shell(device)
         else:
             print("Detected " + device + " device, continue... ")
             shell(device)
     except IndexError:
-        print("ADB module not found, are you sure that you installed it?\n If you are in Windows just copy the .py(this) file to adb library, and run it.")
+        print("ADB module not found, are you sure that you installed it?\n If you are in Windows just copy the .py(this) file to adb, and run it.")
         input()
         quit()
 
 
 def shell(id):
     try:
-        folder = 'apks'
         c = input("print 'help' for available commands: ")
         if c == 'open':
             v = input("Write package/app name: ")
             sbp.run("adb -s " + id + " shell monkey --pct-syskeys 0 -p " + v + " 1 ", shell=True, stdout=sbp.DEVNULL)
             print("Done!\n" + v + " must be opened.")
             shell(id)
-        elif c == 'install':
-            print("WARNING: The APK file must be in the 'apks' folder\nIf you dont have it, you can just create it!")
-            v = input("Write APK's file name(with '.apk')")
-            sbp.run("adb -s "+ id + " install "+".\\"+folder+"\\"+ v, shell=True)
-            shell(id)
+        elif c == 'livelog':
+            try:
+                print("Type 'CTRL + C' to exit!")
+                time.sleep(2)
+                print("Oh i forgot to say, that logs are very fa...")
+                time.sleep(1.5)
+                sbp.run("adb -s "+ id + " logcat",shell=True)
+            except KeyboardInterrupt:
+                print("\nStopping...")
+                shell(id)
         elif c == 'stop':
             v = input("Write package/app/service name: ")
             sbp.run("adb -s " + id + " shell am force-stop " + v, shell=True, stdout=sbp.DEVNULL)
@@ -89,9 +92,10 @@ def shell(id):
             quit()
         elif c == 'monitor':
             try:
-                os.system("adb -s " + id + " shell am monitor")
+                sbp.run("adb -s " + id + " shell am monitor",shell=True)
+                shell(id)
             except KeyboardInterrupt:
-                print("Exiting device monitoring...")
+                print("\nExiting device monitoring...")
                 shell(id)
         elif c == 'clear':
             v = input("What package/app/service data you want to clean/reset")
@@ -107,7 +111,7 @@ def shell(id):
                 " Stop App/Service: 'stop'\n All packages list: 'list'\n Open application: 'open'\n Restart device: "
                 "'reboot' \n Apps activity: 'monitor'\n Clear the app data: 'clear'\n Delete the package/app/service: "
                 "'delete'\n Take THE FULL information about the package/app/service : 'fullinfo'\n Package's used apk's: "
-                "'apkpath'\nInstall application from 'apks' folder: 'install' ")
+                "'apkpath'\n Realtime device log: 'livelog' ")
             shell(id)
         elif c == 'delete':
             v = input("package/app/service name: ")
@@ -128,7 +132,7 @@ def shell(id):
             print("Unknown command...")
             shell(id)
     except KeyboardInterrupt:
-        print("If you want to exit just write it!")
+        print("\n\nIf you want to exit just write it!")
         shell(id)
 
 if __name__ == "__main__":
