@@ -68,6 +68,17 @@ def shell(id):
             sbp.run("adb -s " + id + " shell monkey --pct-syskeys 0 -p " + v + " 1 ", shell=True, stdout=sbp.DEVNULL)
             print("Done!\n" + v + " must be opened.")
             shell(id)
+        elif c == 'install':
+            a = sbp.getoutput('ls apks/')
+            if a == "ls: cannot access 'apks/': No such file or directory":
+                print("'apks' folder didn't found did you created it?")
+                shell(id)
+            else:
+                print(a)
+                pass
+            v = input("Write the .apk file name that in 'apks' folder: ")
+            os.system('adb -s '+ id +' install apks/'+ v)
+            shell(id)
         elif c == 'livelog':
             try:
                 print("Type 'CTRL + C' to exit!")
@@ -111,7 +122,7 @@ def shell(id):
                 " Stop App/Service: 'stop'\n All packages list: 'list'\n Open application: 'open'\n Restart device: "
                 "'reboot' \n Apps activity: 'monitor'\n Clear the app data: 'clear'\n Delete the package/app/service: "
                 "'delete'\n Take THE FULL information about the package/app/service : 'fullinfo'\n Package's used apk's: "
-                "'apkpath'\n Realtime device log: 'livelog' ")
+                "'apkpath'\n Install package from 'apks' file: 'install' \n Realtime device log: 'livelog' ")
             shell(id)
         elif c == 'delete':
             v = input("package/app/service name: ")
