@@ -62,7 +62,7 @@ def main():
 
 def shell(id):
     try:
-        c = input("print 'help' for available commands: ")
+        c = input("write 'help' for available commands: ")
         if c == 'open':
             v = input("Write package/app name: ")
             sbp.run("adb -s " + id + " shell monkey --pct-syskeys 0 -p " + v + " 1 ", shell=True, stdout=sbp.DEVNULL)
