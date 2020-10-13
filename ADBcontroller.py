@@ -68,6 +68,9 @@ def shell(id):
             sbp.run("adb -s " + id + " shell monkey --pct-syskeys 0 -p " + v + " 1 ", shell=True, stdout=sbp.DEVNULL)
             print("Done!\n" + v + " must be opened.")
             shell(id)
+        elif c == 'clear':
+            os.system('clear')
+            shell(id)
         elif c == 'install':
             a = sbp.getoutput('ls apks/')
             if a == "ls: cannot access 'apks/': No such file or directory":
@@ -108,8 +111,8 @@ def shell(id):
             except KeyboardInterrupt:
                 print("\nExiting device monitoring...")
                 shell(id)
-        elif c == 'clear':
-            v = input("What package/app/service data you want to clean/reset")
+        elif c == 'cleardata':
+            v = input("What package/app/service data you want to clean/reset: ")
             sbp.run("adb -s " + id + " shell pm clear " + v, shell=True, stdout=sbp.DEVNULL)
             print("Done!\n" + v + " data must be cleared.")
             shell(id)
@@ -120,9 +123,9 @@ def shell(id):
         elif c == 'help':
             print(
                 " Stop App/Service: 'stop'\n All packages list: 'list'\n Open application: 'open'\n Restart device: "
-                "'reboot' \n Apps activity: 'monitor'\n Clear the app data: 'clear'\n Delete the package/app/service: "
+                "'reboot' \n Apps activity: 'monitor'\n Clear the app data: 'cleardata'\n Delete the package/app/service: "
                 "'delete'\n Take THE FULL information about the package/app/service : 'fullinfo'\n Package's used apk's: "
-                "'apkpath'\n Install package from 'apks' file: 'install' \n Realtime device log: 'livelog' ")
+                "'apkpath'\n Install package from 'apks' file: 'install' \n Realtime device log: 'livelog'\n Clear log: 'clear' ")
             shell(id)
         elif c == 'delete':
             v = input("package/app/service name: ")
