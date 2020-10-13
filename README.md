@@ -1,14 +1,23 @@
 # AdbController
+Installation:
+  Linux:
+    sudo apt update
+    sudo apt install python3.8 // Installing Python3.8
+    sudo apt install git //Installing Git
+    sudo apt install android-tools-adb //Installing ADB
+    git clone https://github.com/UnOSdev/AdbController //Downloading the program files
+
+  Windows:
+    Download and install Python3.8: https://www.python.org/downloads/release/python-385/
+    Download and install Git: https://git-scm.com/downloads
+    Download ADB: https://www.xda-developers.com/install-adb-windows-macos-linux/ (Extract the zip to any folder)
+
 
 
 This program can control your android phone by ADB module, without root.
 
-So far, this script has quite a bit of functionality, but this is just the first version.
-
-Download 'ADBcontroller.py'
-
-NOTE: This program tested on Linux(Elementart OS), but dont worry its working in Windows too, you need just take "ADBcontroller.py" to adb directory and run it.
-If you find any bug, well contact me for it
+NOTE: This program tested on Linux(Ubuntu 20.04 LTS), but dont worry its may working in Windows too, you need just take "ADBcontroller.py" to adb directory and run it.
+If you find any bug, contact me for it.
 
 ًWork function list:
 
@@ -32,7 +41,7 @@ If you find any bug, well contact me for it
   
   Install '.apk' package from 'apks' folder: 'install'
 
-The script absolutely does not need superuser or root rights.
+The program absolutely does not need superuser or root rights.
 The only thing you need is to enable USB debugging on you'r android phone.
 
 Ubayda
