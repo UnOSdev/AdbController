@@ -49,6 +49,8 @@ If you find any bug, contact me for it.
   Package's used apk's: 'apkpath' 
   
   Install '.apk' package from 'apks' folder: 'install'
+  
+  Realtime device log: 'livelog'
 
 The program absolutely does not need superuser or root rights.
 The only thing you need is to enable USB debugging on you'r android phone.
