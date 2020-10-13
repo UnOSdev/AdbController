@@ -25,7 +25,7 @@ Installation:
 
 This program can control your android phone by ADB module, without root.
 
-NOTE: This program tested on Linux(Ubuntu 20.04 LTS), but dont worry its may working in Windows too, you need just take "ADBcontroller.py" to adb directory and run it.
+NOTE: This program tested on Linux(Ubuntu 20.04 LTS), but dont worry its may working in Windows too(propably), you need just take "ADBcontroller.py" to adb directory and run it(Use linux for minimum bugs).
 If you find any bug, contact me for it.
 
 ًWork function list:
