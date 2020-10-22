@@ -25,10 +25,10 @@ Installation:
 
 This program can control your android phone by ADB module, without root.
 
-NOTE: This program tested on Linux(Ubuntu 20.04 LTS), but dont worry its may working in Windows too(propably), you need just take "ADBcontroller.py" to adb directory and run it(Use linux for minimum bugs).
+NOTE: This program tested on Linux(Ubuntu 20.04 LTS), and most likely some functions will not work in Windows, use linux for minimum bugs...
 If you find any bug, contact me for it.
 
-ًWork function list:
+Work function list:
 
   Stop App/Service: 'stop'
   
@@ -58,3 +58,10 @@ The program absolutely does not need superuser or root rights.
 The only thing you need is to enable USB debugging on you'r android phone.
 
 Ubayda
+        Z
+       Z
+      z
+     z
+(-_-)
+
+
