@@ -58,10 +58,10 @@ The program absolutely does not need superuser or root rights.
 The only thing you need is to enable USB debugging on you'r android phone.
 
 Ubayda
-        Z
-       Z
-      z
-     z
+­        Z
+­       Z
+­      z
+­     z
 (-_-)
 
 
