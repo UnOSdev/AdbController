@@ -20,6 +20,8 @@ Installation:
     Download and install Git: https://git-scm.com/downloads
     
     Download ADB: https://www.xda-developers.com/install-adb-windows-macos-linux/ (Extract the zip to any folder)
+    
+    git clone https://github.com/UnOSdev/AdbController //Downloading the program files
 
 
 
